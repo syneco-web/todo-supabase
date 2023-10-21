@@ -13,12 +13,12 @@ export function reportWebVitals(metric: NextWebVitalsMetric) {
       break
     case 'TTFB':
       // handle TTFB results
-      console.log('TTFB invoked')
+      console.log('TTFB: ${Math.round(metric.value * 10) / 10}')
       break
     case 'Next.js-hydration':
       // handle hydration results
       console.log(
-        `Next.js-hydration: ${Math.round(metric.value * 10) / 10} -> ${
+        `Next.js-hydration: ${Math.round(metric.startTime * 10) / 10} -> ${
           Math.round((metric.startTime + metric.value) * 10) / 10}`
       )
       break

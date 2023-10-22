@@ -32,7 +32,7 @@ const Isr: NextPage<StaticProps> = ({ tasks, notices }) => {
   return (
     <Layout title='ISR'>
         <p className="mb-3 text-indigo-500">ISR</p>
-        <p className="mb-3 text-indigo-800">(Incremental Server Rendering)</p>
+        <p className="mb-3 text-indigo-800">(Incremental Static Regeneration)</p>
         <p>Regenerate the HTML with fresh data in run time</p>
         <ul>
             <li>Direct access to ISR page</li>

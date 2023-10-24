@@ -61,14 +61,16 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     validateSession()
   }, [])
+  
+  return <Component {...pageProps} />
 
-  return (
-    <QueryClientProvider client={queryClient}>
-      <ReactQueryDevtools initialIsOpen={false} />
-      <Component {...pageProps} />
-      <ReactQueryDevtools initialIsOpen={false} />
-    </QueryClientProvider>
-  )
+  // return (
+  //   <QueryClientProvider client={queryClient}>
+  //     <ReactQueryDevtools initialIsOpen={false} />
+  //     <Component {...pageProps} />
+  //     <ReactQueryDevtools initialIsOpen={false} />
+  //   </QueryClientProvider>
+  // )
 }
 
 export default MyApp

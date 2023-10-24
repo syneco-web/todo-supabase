@@ -10,3 +10,5 @@ export type Notice = {
     content: string
     user_id: string | undefined
 }
+export type EditedTask = Omit<Task, "user_id" | "created_at">
+export type EditedNotice = Omit<Notice, "user_id" | "created_at">
